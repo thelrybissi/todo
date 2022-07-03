@@ -10,7 +10,7 @@ namespace Todo.Model{
 
         public bool Done { get; set; }
 
-        public DateTime CreatAt { get; set; }
+        public DateTime CreatAt { get; set; } 
     } 
 }
 
