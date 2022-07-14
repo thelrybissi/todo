@@ -10,8 +10,15 @@ builder.Services.AddControllers();
 //Adicionado os DbContext como serviço -  menos código, sem using
 builder.Services.AddDbContext<AppDbContext>();
 
+//Adicionando o Swagger
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
 
 app.MapControllers();
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.Run();
