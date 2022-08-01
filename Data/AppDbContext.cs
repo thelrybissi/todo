@@ -16,7 +16,7 @@ namespace Todo.Data {
 
         //Configuracao Conexa
         
-        protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlServer("Server=localhost,1433;Database=Todo;User ID=sa;Password=1q2w3e4r@#$");
+        //protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlServer("Server=localhost,1433;Database=Todo;User ID=sa;Password=1q2w3e4r@#$");
         
 
     }
