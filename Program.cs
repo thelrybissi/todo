@@ -9,7 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 //Adicionado os DbContext como serviço -  menos código, sem using
-builder.Services.AddDbContext<AppDbContext>();
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
 
 //Adicionando o Swagger
 builder.Services.AddEndpointsApiExplorer();
@@ -21,5 +23,9 @@ app.MapControllers();
 
 app.UseSwagger();
 app.UseSwaggerUI();
+
+if(app.Environment.IsDevelopment()){
+    Console.WriteLine("Env dev");
+}
 
 app.Run();
