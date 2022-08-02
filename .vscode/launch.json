@@ -10,7 +10,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/<target-framework>/<todo.dll>",
+            "program": "${workspaceFolder}/bin/Debug/net6.0/Todo.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
